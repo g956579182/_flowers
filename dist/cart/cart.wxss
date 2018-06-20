@@ -1,0 +1,155 @@
+.shade{
+  background-color:#000;
+  position:fixed;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  margin: 0;
+  left: 0;
+  top:0;
+  right:0;
+  bottom: 0;
+}
+.particulars{
+  width:100%;
+  border:0;
+  z-index: 9999;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+}
+.produsdetail{
+  background: #fff;
+  padding-top:20rpx;
+  position: relative;
+}
+.detaname{
+  border-bottom: 1px solid #e6e6e6;
+  height: 168rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20rpx;
+  
+}
+.detaname image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 30rpx;
+}
+.detaname .promsgs view:first-child{
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+.detaname .promsgs view:last-child{
+  font-size: 16px;
+  color: #ff5858;
+}
+.detaguige{
+  border-bottom: 1px solid #e6e6e6;
+  height: 110rpx;
+  padding-left: 20rpx;
+}
+.guige view{
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 110rpx;
+}
+.guige view button{
+  font-size: 12px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ff5858;
+  margin-left: 20rpx;
+  margin-right: 0;
+  height: 40rpx;
+  width: 100rpx;
+  line-height: 40rpx;
+  display: inline-block;
+  padding: 0;
+}
+.detanumber{
+  height: 110rpx;
+  padding-left: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 110rpx;
+}
+.detanumber .numb{
+  font-size: 16px;
+  color: #333;
+}
+.detanumber .nums{
+  font-size: 18px;
+  color: #ff5858;
+  margin: 0 20rpx;
+}
+.detanumber image{
+  width: 46rpx;
+  height: 46rpx;
+}
+.detanumber view{
+  line-height: 10rpx;
+}
+.joincarts button{
+  background: #ff5858;
+  color: #fff;
+  height: 98rpx;
+  width: 100%;
+  line-height: 98rpx;
+  font-size: 18px;
+  border-radius: 0;
+}
+.close{
+  position: absolute;
+  right:20rpx;
+  top: 20rpx;
+}
+.close image{
+  width: 56rpx;
+  height: 56rpx;
+}
+.diaji{
+  opacity: .8;
+}
+.detanumber .numb{
+  font-size: 16px;
+  color: #333;
+}
+.detanumber .nums{
+  width: 50rpx;
+  font-size: 18px;
+  color: #ff5858;
+  margin: 0 20rpx;
+  text-align: center;
+}
+.particulars .paysel{
+  height: 98rpx;
+  display: flex;
+  z-index: 9999;
+  background: #fff;
+  position: static;
+}
+.halfwid button:first-child{
+  background: #ffb54c;
+}
+.halfwid button:last-child{
+  background: #ff3e3e;
+}
+.hoverd{
+  opacity: .8;
+}
+.halfwid button{
+  width: 50%;
+  color: #fff;
+  border-radius: 0;
+  font-size: 16px;
+  height: 100%;
+  line-height: 98rpx;
+}

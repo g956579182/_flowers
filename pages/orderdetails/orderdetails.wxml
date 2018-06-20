@@ -1,0 +1,91 @@
+<!--pages/order-details/order-details.wxml-->
+<view class='allpage pddtop'>
+  <view class='bgfff'>
+    <view class='serdetails'>
+      <view class='disright'>
+        <view class='dels'>
+          <image src="/images/state.png"></image>
+          <text>买家付款</text>
+          <text>商家发货</text>
+          
+          <text>交易完成</text>
+        </view>
+        <view class='botline'>
+          <view class='dots'></view>
+          <view class='lines'></view>
+          <view>
+            <image src="/images/jindu.png"></image>
+          </view>
+          <view class='lines'></view>
+          <view class='dots'></view>
+        </view>
+      </view>
+    </view>
+    <view class='maijia'>
+      <view class='adres'>
+        <image src="/images/daifahuo.png"></image>
+      </view>
+      <view class='msguser' wx:if="{{details.dtype==1}}">
+        <text>收货人：{{details.receiver}}</text>
+        <text>手机号：{{details.mobile}}</text>
+      </view>
+      <view class='shouhuo' wx:if="{{details.dtype==1}}">
+        <text>收货地址：{{details.country+details.address}}</text>
+      </view>
+      <view class='msguser' wx:if="{{details.dtype==0}}">
+        <text>提货手机：{{details.carrier}}</text>
+        <text>提货时间：{{details.carrytime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='orderdetails' wx:for="{{details.items}}" wx:key="keys">
+    <view class='oderimg'>
+      <image src="{{imgDomain+item.photos}}"></image>
+    </view>
+    <view class='odername'>
+      <text>{{item.name}}</text>
+      <text wx:if="{{item.sname!=''}}">商品规格：{{item.sname}}</text>
+    </view>
+    <view class='orderprice'>
+      <text>￥{{item.price}}</text>
+      <text>X{{item.count}}</text>
+    </view>
+  </view>
+  <view class='payarea'>
+    <view>
+      <text>商品总价</text>
+      <text>运费</text>
+      <text>优惠</text>
+      <text class='pays'>实际付款</text>
+    </view>
+    <view>
+      <text>￥{{details.goodsprice}}</text>
+      <text>￥{{details.expressprice}}</text>
+      <text>-￥{{details.discount}}</text>
+      <text class='pays'>￥{{details.price}}</text>
+    </view>
+  </view>
+  <view class="orderpage">
+    <text>订单编号：{{details.orderno}}</text>
+    <text>创建时间：{{details.created_at}}</text>
+    <text wx:if="{{details.sendtime!=0}}">发货时间：{{details.sendtime}}</text>
+    <text wx:if="{{details.finishtime!=0}}">完成时间：{{details.finishtime}}</text>
+  </view>
+  <view class='bottmqiu'>
+    <view>
+      <button bindtap="more">再来一单</button>
+    </view>
+    <view wx:if="{{details.status==0}}">
+      <button bindtap="cancel">删除订单</button>
+    </view>
+    <view wx:if="{{details.status==0}}">
+      <button bindtap="topay">确认支付</button>
+    </view>
+    <view wx:if="{{details.status==3}}">
+      <button bindtap='evaluation'>评价</button>
+    </view>
+    <view wx:if="{{details.status==2}}">
+      <button bindtap="finish">确认收货</button>
+    </view>
+  </view>
+</view>

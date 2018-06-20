@@ -1,0 +1,115 @@
+/* pages/productlist/productlist.wxss */
+
+.prolisthead {
+  background: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.prolisthead view {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.listcon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listleft {
+  width: 180rpx;
+}
+
+.listright {
+  height: 160rpx;
+  background: #fff;
+  width: 560rpx;
+  margin-top: 10rpx;
+}
+
+.listleft view {
+  height: 90rpx;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidde;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listleft view.active{
+  border-left: 10rpx solid #ff5858;
+}
+.producmsg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.products {
+  height: 160rpx;
+  padding: 0 10rpx;
+  background: #fff;
+  margin-bottom: 10rpx;
+  padding-right: 20rpx;
+}
+
+.products image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.prodeat {
+  width: 380rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rpx;
+}
+
+.prodeat .procart image {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.prodea-msg {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.prodea-msg view:first-child {
+  font-size: 14px;
+  color: #333;
+}
+
+.prodea-msg view:last-child {
+  font-size: 16px;
+  color: #ff5858;
+}
+
+.prodea-msg view:last-child text {
+  font-size: 10px;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 10rpx;
+}
+.nomore{
+  font-size: 12px;
+  color: #999;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}

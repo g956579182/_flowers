@@ -1,0 +1,28 @@
+/* pages/addremarks/addremarks.wxss */
+
+.holders{
+  font-size: 16px;
+  color: #999;
+}
+.padlr{
+  padding: 20rpx 20rpx 0;
+}
+
+ textarea{
+  width: 710rpx;
+  height:200rpx;
+  background: #fff;
+  padding: 20rpx;
+}
+button{
+  background: #ff5858;
+  color: #fff;
+  width: 710rpx;
+  height: 80rpx;
+  font-size: 16px;
+  margin-top: 280rpx;
+}
+.placestyle{
+  font-size: 16px;
+  color:#333;
+}

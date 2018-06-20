@@ -1,0 +1,8 @@
+<!--pages/shipaddress/shipaddress.wxml-->
+<view class='allpage'>
+  <view class='addresnai'>
+    <view class='lines'></view>
+    <view>暂无地址信息</view>
+    <view class='lines'></view>
+  </view>
+</view>

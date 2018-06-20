@@ -1,0 +1,5 @@
+<!--pages/addremarks/addremarks.wxml-->
+<view class='allpage padlr'>
+   <textarea placeholder="请输入备注" placeholder-style="placestyle" placeholder-class="holders" auto-focus="{{torfs}}" bindblur="setmarks" show-confirm-bar="{{confirm}}"></textarea>
+  <button>确定</button>
+</view>

@@ -1,0 +1,255 @@
+/* pages/confirmorders/confirmorders.wxss */
+
+.ways {
+  font-size: 16px;
+  color: #333;
+  padding:20rpx;
+  background: #fff;
+}
+
+.pattern {
+  background: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30rpx;
+}
+
+.dinner, .outfood, .haself {
+  width: 180rpx;
+  height: 80rpx;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dinner image {
+  width: 44rpx;
+  height: 40rpx;
+}
+
+.outfood image {
+  width: 52rpx;
+  height: 40rpx;
+}
+
+.haself image {
+  width: 48rpx;
+  height: 40rpx;
+}
+
+.dinner view, .outfood view, .haself view {
+  font-size: 16px;
+  color: #999;
+}
+.pattern view image{
+  margin-right: 10rpx;
+}
+.pattern view image,
+.pattern view view{
+  display: inline-block;
+}
+.outfood{
+  border-left: none;
+  border-right: none;
+}
+.producmsg{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 0 20rpx;
+}
+.products{
+  height: 180rpx;
+  background: #fff;
+  margin-top: 10rpx;
+}
+.products image{
+  width: 140rpx;
+  height: 140rpx;
+}
+.prodeat{
+  width: 550rpx;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.prodea-msg{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.prodea-msg view:first-child{
+  font-size: 14px;
+  color: #333;
+}
+.prodea-msg view:last-child{
+  font-size: 16px;
+  color: #ff5858;
+}
+.prodea-msg view:last-child text{
+  font-size: 10px;
+  color: #999;
+  text-decoration:line-through;
+  margin-left: 10rpx;
+}
+.prodea-msg .guige{
+  font-size: 10px;
+  color: #333;
+}
+.numbers{
+  font-size: 16px;
+  color:#666;
+  vertical-align: bottom;
+}
+.canzhuo{
+  margin-top: 10rpx;
+  
+}
+.canzhuo,.canju{
+  padding: 0 20rpx;
+  background: #fff;
+  height: 90rpx;
+}
+.padcan,.padju{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89rpx;
+}
+.padcan{
+  border-bottom: 1px solid #e6e6e6;
+}
+.padcan view,.padju view{
+  color: #333;
+  font-size: 16px;
+}
+.rightos text{
+  font-size: 12px;
+  color: #999;
+}
+.rightos image{
+  width: 13rpx;
+  height: 22rpx;
+  margin-left: 10rpx;
+}
+.yoouhui{
+  margin-top: 10rpx;
+}
+.yihouhui{
+  border-top: 1px solid #e6e6e6;
+}
+.yihouhui view:last-child{
+  color: #ff5e75;
+}
+.beizhu{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 20rpx;
+  margin-top: 10rpx;
+  height: 90rpx;
+}
+.beizhu view:first-child{
+  font-size: 16px;
+  color: #333;
+}
+.tidan{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.tidan view text{
+  font-size: 16px;
+  color: #333;
+}
+.tidan view text:last-child{
+  color: #ff5e75;
+}
+.tidan button{
+  background: #ff5e75;
+  color: #fff;
+  line-height: 90rpx;
+  width: 250rpx;
+  height: 90rpx;
+  border-radius: 0;
+  margin: 0;
+}
+.actived{
+  border-bottom: 2px solid #ff5858;
+  border-color: #ff5858;
+  border-left: 1px solid #ff5858;
+  border-right: 1px solid #ff5858;
+}
+.actived view{
+  color: #ff5858;
+}
+.peisong{
+  border-top: 1px solid #e6e6e6;
+}
+.padcan input view{
+  width: 50%;
+  height: 100%;
+}
+
+.canshi{
+  background: #fff;
+  margin-top: 10rpx;
+  height: 184rpx;
+  padding-top: 20rpx;
+}
+.canshi view{
+  font-size: 16px;
+  color: #333;
+  padding: 0 20rpx;
+}
+.radio-group label{
+  display: block;
+  padding: 0 20rpx;
+  font-size: 14px;
+  color: #333;
+}
+.radio-group label radio{
+  transform: scale(.7);
+}
+.radio-group label:first-child{
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.notop{
+  margin-top: 0;
+}
+.padju view.shous:first-child text{
+  font-size: 12px;
+  color: #333;
+  margin-left: 10rpx;
+  width: 389rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+.rightos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.picker-time{
+  color: #333;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 6rpx;
+}

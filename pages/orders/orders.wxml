@@ -1,0 +1,81 @@
+<!--pages/orderdetails/orderdetails.wxml-->
+<view class='allpage'>
+  <view class='headesel'>
+    <view class="hed {{status=='a'&&status!=0?'actived':''}}" bindtap="statuslist" data-status='a'>
+      <text>全部</text>
+      <text class='botline'></text>
+    </view>
+    <view class="hed {{status==0?'actived':''}}" bindtap="statuslist" data-status='0'>
+      <text>待付款</text>
+      <text class='botline'></text>
+    </view>
+    <view class="hed {{status==2?'actived':''}}" bindtap="statuslist" data-status='2'>
+      <text>待收货</text>
+      <text class='botline'></text>
+    </view>
+    <view class="hed {{status==3?'actived':''}}" bindtap="statuslist" data-status='3'>
+      <text>已完成</text>
+      <text class='botline'></text>
+    </view>
+  </view>
+  <view wx:for="{{orders}}" wx:for-item="item" wx:key="keys">
+    <view class='haime'>
+      <view class='henhai' data-id="{{item.id}}" bindtap='todeatail'>
+        <view>查看详情</view>
+        <image src="/images/righto.png"></image>
+      </view>
+      <view class='daifua'>
+        <block wx:if='{{item.status==0}}'>
+          待付款
+        </block>
+        <block wx:if='{{item.status==1}}'>
+          待发货
+        </block>
+        <block wx:if='{{item.status==2}}'>
+          待收货
+        </block>
+        <block wx:if='{{item.status==3||item.status==4}}'>
+          已完成
+        </block>
+      </view>
+    </view>
+    <block wx:for='{{item.items}}' wx:for-item="iitem" wx:key='iitemk'>
+    <view class='orderdetails'>
+    
+      <view class='oderimg'>
+        <image src="{{imgDomain+iitem.photos}}"></image>
+      </view>
+      <view class='odername' >
+        <text>{{iitem.name}}</text>
+        <text wx:if="{{iitem.sname}}">商品规格：{{iitem.sname}}</text>
+      </view>
+      <view class='orderprice'>
+        <text>￥{{iitem.price}}</text>
+        <text>X{{iitem.count}}</text>
+      </view>
+       
+    </view>
+   </block>
+    <view class='paying'>
+      <view>共计{{item.items.length}}件商品</view>
+      <view>合计：￥
+        <text>{{(item.price)}}</text>
+      </view>
+      <view>（包含运费￥{{item.expressprice}}）</view>
+    </view>
+    <view class='fukuan'>
+      <view class='quxiao' wx:if='{{item.status==0}}' bindtap="cancel" data-id='{{item.id}}' data-idx='{{index}}'>
+        <button>取消订单</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==0}}' bindtap="topay" data-id='{{item.id}}' data-idx='{{index}}'>
+        <button>付款</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==2}}' bindtap="finish" data-id="{{item.id}}" data-idx='{{index}}'>
+        <button>确认收货</button>
+      </view>
+      <view class='payed' wx:if='{{item.status==3}}' bindtap="eve" data-id="{{item.id}}">
+        <button>评价</button>
+      </view>
+    </view>
+  </view>
+</view>

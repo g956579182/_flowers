@@ -1,0 +1,274 @@
+/* pages/promessage/promessage.wxss */
+.allpage{
+  height: 100%;
+}
+.bgpic {
+  height: 500rpx;
+}
+
+.bgpic image {
+  width: 750rpx;
+  height: 500rpx;
+}
+
+.promsg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+  background: #fff;
+  height: 132rpx;
+}
+
+.promsg .proprice view text:first-child {
+  font-size: 18px;
+  color: #ff5858;
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+
+.promsg .proprice view text:last-child {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.promsg .proprice text:first-child {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+.shares{
+  line-height: 1.2;
+}
+.promsg .shares image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.promsg .shares text {
+  font-size: 10px;
+  color: #333;
+  display: block;
+}
+button.shares{
+  background-color: transparent;
+  border:1px solid rgba(0, 0, 0, 0);
+  border-radius:0;
+  position: absolute;
+  right: 10rpx;
+}
+button.shares::after{
+  border:1px solid rgba(0, 0, 0, 0);
+}
+.commitsraea {
+  background: #fff;
+  padding: 0 20rpx;
+}
+
+.padlr {
+  border-bottom: 1px solid #e6e6e6;
+}
+.comitsa{
+  text-align: left;
+  padding: 0 20rpx;
+  background: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #e6e6e6;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.comitsa text:first-child{
+  width: 6rpx;
+  height: 28rpx;
+  background: #ff5e75;
+  margin-right: 10rpx;
+  display: block;
+}
+.comitsa text:last-child{
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+/* ...............评分....... */
+
+.comment1-description .star-pos .hideStar {
+  z-index: 2;
+  background-image: url("http://p0vqqsnqv.bkt.clouddn.com/%E5%B0%8F%E6%98%9F.png");
+  /* width: 83rpx; */
+  height: 43rpx;
+  background-size: 43rpx 43rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.starsM {
+  z-index: 1;
+  width: 44rpx;
+  height: 38rpx;
+  background-image: url("http://p0vqqsnqv.bkt.clouddn.com/%E5%B0%8F%E6%98%9F%E9%80%89%E4%B8%AD.png");
+  background-size: 43rpx 43rpx;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* pingfen end */
+
+.caad image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+
+.pingjia {
+  padding: 0 30rpx;
+}
+
+.pade {
+  padding: 0 30rpx;
+}
+
+.pingjia label {
+  font-size: 12px;
+  color: #333;
+}
+
+.comment1-description {
+  margin-top: 10rpx;
+}
+
+.prostar .pinfont {
+  color: #333;
+  font-size: 14px;
+}
+
+.prostar {
+  padding-top: 10rpx;
+}
+.comitsfont{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.comitsfont view {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  line-height: 36rpx;
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+.commitsimg{
+  padding-bottom: 10rpx;
+}
+.commitsimg image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.comitime{
+  font-size: 14px;
+  color: #333;
+}
+.linflex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.evanai{
+  text-align: center;
+  background: #f4f4f4;
+}
+.evanai text{
+  font-size: 10px;
+  color: #999;
+}
+.paysel{
+  position: fixed;
+  left: 0;
+   bottom: 0; 
+  height: 98rpx;
+  display: flex;
+  /* z-index: 999; */
+  background: #fff;
+  width: 750rpx;
+}
+.tokefu{
+  width: 149rpx;
+  border-right: 1px solid #e6e6e6;
+  text-align: center;
+  padding-top: 10rpx;
+  outline: none;
+  background: #fff;
+  line-height: 1.2;
+  border-radius: 0;
+}
+.toshop{
+  width: 150rpx;
+  text-align: center;
+  padding-top: 10rpx;
+}
+.toshop image{
+  width: 40rpx;
+  height: 44rpx;
+}
+.tokefu image{
+  width: 52rpx;
+  height: 44rpx;
+}
+.toshop text,.tokefu text{
+  color: #333;
+  font-size: 10px;
+  display: block;
+}
+.joincart button{
+  width: 225rpx;
+  background: #ffb54c;
+  color: #fff;
+  border-radius: 0;
+  font-size: 16px;
+  height: 100%;
+  line-height: 98rpx;
+}
+.paynow button{
+  width: 225rpx;
+  background: #ff3e3e;
+  color: #fff;
+  border-radius: 0;
+  font-size: 16px;
+  height: 100%;
+  line-height: 98rpx;
+}
+.hoverd{
+  opacity: .8;
+}
+.dispace{
+  height: 110rpx;
+  background: #f2f2f2;
+}
+.allpage .commitsraea:last-child .padlr{
+  border-bottom: none;
+}
+.sroltop{
+  position: fixed;
+  right:20rpx;
+  bottom: 120rpx;
+}
+
+.sroltop image{
+  width: 70rpx;
+  height: 70rpx;
+}
+page{ height: 100%;}
+.detailpro{
+  padding: 20rpx;
+  background: #fff;
+  text-align: center;
+}
+.detailpro image{
+  width: 700rpx;
+  height: 500rpx;
+}

@@ -1,0 +1,35 @@
+<!--pages/addresslist/addresslist.wxml-->
+<view class='allpage'>
+  <view class="item-box" wx:if="{{adress}}">
+    <view class="items">
+      <view wx:for="{{addrelist}}" wx:key="{{index}}" class="item">
+        <view bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{cardTeams[index].right}}rpx" class="inner txt" data-index="{{index}}" bindtap="select" data-id='{{item.id}}'>
+          <view class="adresmag">
+            <view class='usernames'>
+              <text>{{item.name}}</text>
+              <text>{{item.mobile}}</text>
+            </view>
+            <view class='adre'>
+              <text wx:if="{{item.isdefault}}">[默认]</text>
+              <text>{{item.country}}</text>
+            </view>
+          </view>
+          <view data-id='{{item.id}}' bindtap="importid">
+            <image class="item-icon" mode="widthFix" src="{{icon}}"></image>
+          </view>
+        </view>
+        <view data-id="{{item.id}}" bindtap="delItem" class="inner del" data-index="{{index}}">删除</view>
+      </view>
+    </view>
+  </view>
+  <view class='addresnai' wx:if="{{noaddress}}">
+    <view class='lines'></view>
+    <view>暂无地址信息</view>
+    <view class='lines'></view>
+  </view>
+  <navigator url='/pages/addreset/addreset'>
+    <view class='addr'>
+      <button>新增收货地址</button>
+    </view>
+  </navigator>
+</view>

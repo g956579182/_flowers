@@ -1,0 +1,8 @@
+{
+  "extEnable": true,
+  "ext": {
+    "id": "5",
+    "shopid": "1",
+    "module":"cy"
+  }
+}

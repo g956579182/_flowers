@@ -1,0 +1,41 @@
+<!--shake.wxml-->
+<template name="cart">
+<view class='shade' style="display:{{screenType?'block':'none'}}"></view>
+  <view class="particulars" style="display:{{screenType?'block':'none'}}">
+    <view class='produsdetail'>
+      <view class='close' bindtap='hideshade'>
+        <image src="/images/close.png"></image>
+      </view>
+      <view class='detaname'>
+        <image src="{{imgDomain+goods.photos}}"></image>
+        <view class='promsgs'>
+          <view>{{goods.name}}</view>
+          <view>￥{{goods.price}}</view>
+        </view>
+      </view>
+      <view class='detaguige' wx:if="{{goods.specs.length>0}}">
+        <view class='guige'>
+          <view>选择规格：
+            <block wx:for='{{goods.specs}}' wx:key='keys'>
+              <button bindtap='selSpec' data-index='{{index}}'>{{item.name}}</button>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class='detanumber'>
+        <view class='numb'>购买数量</view>：
+        <view class='plus' bindtap="minusCount" data-index="{{index}}">
+          <image src="/images/decad.png"></image>
+        </view>
+        <view class='nums'>{{spec.quantity}}</view>
+        <view class='deca' bindtap="addCount" data-index="{{index}}">
+          <image src="/images/plus.png"></image>
+        </view>
+      </view>
+      <view class='paysel halfwid'>
+          <button type="button" hover-class='hoverd' bindtap='joincarts'>加入购物车</button>
+          <button type="button" hover-class='hoverd' bindtap="buynow">立即购买</button>
+      </view>
+    </view>
+  </view>
+</template>

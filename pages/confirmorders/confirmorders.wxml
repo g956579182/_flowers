@@ -1,0 +1,89 @@
+<!--pages/confirmorders/confirmorders.wxml-->
+<view class='allpage'>
+  <form bindsubmit="formSubmit">
+    <view class='products' wx:for="{{glist}}" wx:for-item="item" wx:key="keys">
+      <view class='producmsg'>
+        <image src="{{imgDomain+item.info.photos}}"></image>
+        <view class='prodeat'>
+          <view class='prodea-msg'>
+            <view>{{item.info.name}}</view>
+            <view class='guige' wx:if="{{item.info.spec!=''}}">规格:{{item.info.spec}}</view>
+            <view>￥{{item.info.price}}
+            </view>
+          </view>
+        </view>
+        <view class='numbers'>X{{item.count}}</view>
+      </view>
+    </view>
+    <view class='canju yoouhui'>
+      <view class='padju'>
+        <view>配送时间:</view>
+
+        <view class='rightos'>
+          <picker mode="date" value="{{date}}" start="2017-09-01" end="2018-09-01" bindchange="bindDateChange">
+            <view class="picker-time">
+              {{date}}
+            </view>
+          </picker>
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view class="picker-time">
+              {{time}}
+            </view>
+          </picker>
+          <image src="/images/righto.png"></image>
+        </view>
+
+      </view>
+    </view>
+    <view class='canju yoouhui notop'>
+      <view class='padju peisong'>
+        <view class='shous'>收货地址:
+          <text>{{address.country+address.address}}</text>
+        </view>
+        <view bindtap="toaddress">
+          <view class='rightos'>
+            <text>请选择</text>
+            <image src="/images/righto.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='canju'>
+      <view class='padju peisong'>
+        <view>配送费用：</view>
+        <view>￥{{expressprice}}</view>
+      </view>
+    </view>
+    <view class='canju yoouhui' wx:if="{{!nocards}}">
+      <view class='padju'>
+        <view>使用优惠券：</view>
+        <view class='rightos' bindtap="cardList">
+          <text>{{text}}</text>
+          <image src="/images/righto.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class='canju' wx:if="{{!nocards}}">
+      <view class='padju yihouhui'>
+        <view>已优惠：</view>
+        <view>-￥{{reduce}}</view>
+      </view>
+    </view>
+    <view class='beizhu'>
+      <view>添加备注：</view>
+      <navigator url='/pages/addremarks/addremarks' hover-class='none'>
+        <view class='rightos'>
+          <text>礼品卡留言或特殊要求</text>
+          <image src="/images/righto.png"></image>
+        </view>
+      </navigator>
+    </view>
+    <view class='tidan'>
+      <view>
+        <text>待付款</text>
+        <text>￥{{(ototal-mreduce-reduce)}}</text>
+      </view>
+      <button type='button' bindtap="create">提交订单</button>
+    </view>
+  </form>
+</view>

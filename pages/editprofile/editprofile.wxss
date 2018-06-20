@@ -1,0 +1,43 @@
+/* pages/editprofile/editprofile.wxss */
+.userarea{
+  height: 320rpx;
+  background: #fff;
+  text-align: center;
+}
+.userarea image{
+  width: 180rpx;
+  height: 180rpx;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+.userarea .usernames{
+  font-size: 16px;
+  color: #ff5858;
+  font-weight: 500;
+}
+.inputmsg{
+  height: 90rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.inputmsg .fromfont{
+  width: 120rpx;
+  font-size: 16px;
+  color: #333;
+  margin-right: 50rpx;
+}
+.inputmsg input{
+  color: #333;
+  font-size: 12px;
+}
+.inputmsg radio{
+  transform:scale(.7);
+}
+.inputmsg .radio-group .radio{
+  font-size: 12px;
+  color: #333;
+}

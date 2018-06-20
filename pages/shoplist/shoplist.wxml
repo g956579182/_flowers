@@ -1,0 +1,71 @@
+<!--pages/shoplist/shoplist.wxml-->
+<view class='allpage'>
+  <block>
+    <view class='shophead' wx:if="{{shopheads}}">
+      <checkbox-group bindchange="checkboxChange" >
+        <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll" />
+        <icon wx:else type="circle" bindtap="selectAll" />
+        <text>全选</text>
+      </checkbox-group>
+      <view></view>
+      <view bindtap='bianji'>{{opacontent}}</view>
+    </view>
+    <view class='produs' wx:for="{{carts}}" wx:key="nius" wx:for-item="item">
+      <checkbox-group bindchange="checkboxChanges"  data-index="{{index}}">
+        <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" />
+      </checkbox-group>
+      <view class='products'>
+        <view class='producmsg'>
+          <image src="{{imgDomain+item.info.photos}}"></image>
+          <view class='prodeat'>
+            <view class='prodea-msg'>
+              <view>{{item.info.name}}</view>
+              <view>规格：{{item.info.spec}}</view>
+              <view>￥{{item.info.price}}
+                <text>￥{{item.price}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='counts'>
+        <image src="/images/decad.png" bindtap="minusCount" data-index="{{index}}" wx:if="{{condition}}"></image>
+        <text>{{item.count}}</text>
+        <image src="/images/plus.png" bindtap="addCount" data-index="{{index}}" wx:if="{{condition}}"></image>
+      </view>
+    </view>
+    <view class='confirms' wx:if="{{shopheads}}">
+      <view class='conumbers'>
+        <view>合计：
+          <text>￥{{totalPrice}}</text>
+        </view>
+        <view>(共{{totalpro}}件商品)</view>
+      </view>
+      <button type='button' bindtap='buy'>去结算</button>
+    </view>
+    <view class='delets' wx:if="{{condition}}">
+      <button type='button' bindtap='delets'>删除</button>
+    </view>
+    <view class='shade' style="display:{{screenType?'block':'none'}}"></view>
+    <view class="flowarea" style="display:{{screenType?'block':'none'}}">
+      <view class='confirmdelet'>
+        <view>确认将这{{totalpro}}个商品删除吗？</view>
+        <view class='choice'>
+          <view>
+            <button type='button' bindtap='hideshade'>取消</button>
+          </view>
+          <view>
+            <button type='button' bindtap='deleteList'>确认</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{hasList}}">
+    <view class='bgcol'>
+      <image src="/images/cartlist.png"></image>
+      <text>购物车里还没有商品</text>
+    </view>
+  </block>
+</view>

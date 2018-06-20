@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<import src="/dist/cart/cart.wxml" />
+<import src="/dist/shake/shake.wxml" />
+<template is="shake" data='{{shakeInfo}}' />
+<template is="cart" data='{{goods:goods,screenType:screenType,imgDomain:imgDomain,spec:spec}}' />
+<view class='allpage'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
+    <swiper-item wx:for="{{shopInfo.banner}}" wx:key="item">
+      <image src="{{imgDomain+item}}" class="slide-image" />
+    </swiper-item>
+  </swiper>
+  <view class='prodlist'>
+    <view wx:for="{{categoryInfo}}" wx:for-item="item" class='prodname' wx:key="index"  data-idx="{{idx}}" wx:for-index="idx"  data-id='{{item.id}}' bindtap="goType">
+      <image src="{{imgDomain+item.photos}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class='gonggao'>
+    <view class='zhaun'>专区活动</view>
+    <view class='activiare'>
+      <view>
+        <image src="/images/eveyweek.png"></image>
+        <view>每周优惠</view>
+      </view>
+      <view>
+        <image src="/images/counp.png"></image>
+        <view>优惠券领取</view>
+      </view>
+      <view>
+        <image src="/images/peisong.png"></image>
+        <view>同城专人配送</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class='prolist'>
+    <view class='headfont'>
+      <text> 鲜花精选</text>
+      <image src="/images/huawn.png"></image>
+    </view>
+    <view class='products'>
+      <view class='producmsg' wx:for="{{goodsInfo}}" wx:key='item' data-index="{{index}}">
+        <image src="{{imgDomain+item.photos}}" bindtap='todetas' data-id='{{item.id}}'></image>
+        <view class='prodeat'>
+          <view class='prodea-msg'>
+            <view>{{item.name}}</view>
+            <view>￥{{item.price}}</view>
+          </view>
+          <view class='procart'>
+            <image src="/images/procart.png" bindtap='incarts' data-index='{{index}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="nomore" wx:if="{{nomore}}">
+    没有更多了
+  </view>
+  
+</view>

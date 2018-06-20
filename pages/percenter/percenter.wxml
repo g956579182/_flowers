@@ -1,0 +1,87 @@
+<!--pages/percenter/percenter.wxml-->
+<view class='allpage'>
+  <view class='usermsgs'>
+    <view class='userleft'>
+      <image src="{{member.avatar}}"></image>
+      <text>{{member.nickname}}</text>
+    </view>
+    
+  </view>
+  <view class='oders'>
+    <view class='ordertop'>
+      <view class='oderleft'>我的订单</view>
+      <view class='editfile'>
+        <navigator url="/pages/orders/orders?status=a" hover-class="none">
+          <text>查看全部</text>
+          <image src="/images/righto.png"></image>
+        </navigator>
+      </view>
+    </view>
+    <view class='orderbottom'>
+      <navigator url="/pages/orders/orders?status=0" hover-class='none'>
+        <view class='conmsg1'>
+          <image src="/images/daifukuan.png"></image>
+          <text>待付款</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/orders/orders?status=1"  hover-class='none'>
+        <view class='conmsg2'>
+          <image src="/images/daifahuo.png"></image>
+          <text>待发货</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/orders/orders?status=2"  hover-class='none'>
+        <view class='conmsg3'>
+          <image src="/images/daishouhuo.png"></image>
+          <text>待收货</text>
+        </view>
+      </navigator>
+      <navigator url="/pages/orders/orders?status=3"  hover-class='none'>
+        <view class='conmsg4'>
+          <image src="/images/daipingjia.png"></image>
+          <text>待评价</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='morethes'>
+    <view class='youhui'>
+      <view class='oderleft decsadr'>
+        <navigator url="/pages/addresslist/addresslist" hover-class="none">
+          <image src="/images/adress.png"></image>
+          <text>收货地址</text>
+        </navigator>
+      </view>
+    </view>
+    <view class='youhui'>
+      <view class='oderleft counp'>
+        <navigator url="/pages/coupon/coupon" hover-class="none">
+          <image src="/images/youhuijuan.png"></image>
+          <text>优惠券</text>
+        </navigator>
+      </view>
+    </view>
+    <view class='kefu' bindtap='connectkf'>
+      <view class='oderleft'>
+        <image src="/images/kefu.png"></image>
+        <text>联系客服</text>
+      </view>
+    </view>
+    <view class='youhui'>
+      <view class='oderleft rebates'>
+        <navigator url="/pages/withdrawals/withdrawals" hover-class="none">
+          <image src="/images/rebate.png"></image>
+          <text>返利提现</text>
+        </navigator>
+      </view>
+    </view>
+    <view class='aboutus' bindtap="toMap">
+      <view class='oderleft'>
+        <image src="/images/aboutus.png"></image>
+        <text>关于我们</text>
+      </view>
+    </view>
+  </view>
+  
+</view>

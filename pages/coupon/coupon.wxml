@@ -1,0 +1,33 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='allpage'>
+  <view class='headesel'>
+    <view class="hed {{status==1?'actived':''}}" data-status='1' bindtap="tap">
+      <text>可使用</text>
+      <text class='botline'></text>
+    </view>
+    <view class="hed {{status==2?'actived':''}}" data-status='2' bindtap="tap">
+      <text>可领取</text>
+      <text class='botline'></text>
+    </view>
+    <view class="hed {{status==3?'actived':''}}" data-status='3' bindtap="tap">
+      <text>已失效</text>
+      <text class='botline'></text>
+    </view>
+  </view>
+
+  <view class='coupons' wx:for="{{coupons}}">
+    <view class='coupuse'>
+      <view class='youhuitop'>
+        <view class='coup'>{{item.coupon.title}}</view>
+        <view class='prices' wx:if="{{item.coupon.type=='CASH'}}">-￥{{item.coupon.reduce}}</view>
+        <view class='prices' wx:if="{{item.coupon.type=='DISCOUNT'}}">-{{item.coupon.discount}}%</view>
+        <view class='juan'>
+          <view>优惠券</view>
+        </view>
+      </view>
+      <view class='botompon'>
+        <view>使用期限：{{item.coupon.starttime}}~{{item.coupon.endtime}}</view>
+      </view>
+    </view>
+  </view>
+</view>

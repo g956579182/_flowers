@@ -1,0 +1,25 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='allpage'>
+<view class='coupons' bindtap="chooseCard" data-index='-1'>
+    <view class='coupuse'>
+      <view class='youhuitop'>
+        <view class='coup'>不使用</view>
+        <view class='juan'>
+          <view>优惠券</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='coupons' wx:for="{{cards}}" bindtap="chooseCard" data-index='{{index}}'>
+    <view class='coupuse'>
+      <view class='youhuitop'>
+        <view class='coup'>{{item.title}}</view>
+        <view class='prices' wx:if="{{item.type=='CASH'}}">-￥{{item.reduce}}</view>
+        <view class='prices' wx:if="{{item.type=='DISCOUNT'}}">-{{item.discount}}%</view>
+        <view class='juan'>
+          <view>优惠券</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

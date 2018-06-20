@@ -1,0 +1,139 @@
+/* pages/addresslist/addresslist.wxss */
+.allpage{
+  height: 1206rpx;
+}
+view {
+  box-sizing: border-box;
+}
+
+.item-box {
+  margin: 0 auto;
+}
+
+.items {
+  width: 100%;
+}
+
+.item {
+  position: relative;
+  border-top: 2rpx solid #eee;
+  height: 164rpx;
+  overflow: hidden;
+}
+
+.item:last-child {
+  border-bottom: 2rpx solid #eee;
+  margin-bottom: 98rpx;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  height: 164rpx;
+}
+
+.inner.txt {
+  background-color: #fff;
+  width: 100%;
+  z-index: 5;
+  padding:20rpx 10rpx;
+  padding-left: 20rpx;
+  transition: left 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner.del {
+  background-color: #e64340;
+  width: 150rpx;
+  height: 164rpx;
+  line-height: 164rpx;
+  text-align: center;
+  z-index: 4;
+  right: 0;
+  color: #fff;
+}
+
+.thumb {
+  width: 200px;
+  height: 200px;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+}
+
+.item-icon {
+  width: 42rpx;
+  vertical-align: middle;
+  margin-right: 16rpx;
+}
+
+.adresmag {
+  height: 164rpx;
+  width: 75%;
+}
+
+.usernames text {
+  font-size: 16px;
+  color: #333;
+}
+.adresmag{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  white-space: pre-wrap;
+}
+.adre {
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.adre text:first-child {
+  color: #ff5858;
+  font-size: 14px;
+}
+
+.adre text:last-child {
+  color: #666;
+  font-size: 14px;
+  width: 300rpx;
+}
+.lines{
+  width: 120rpx;
+  height: 1rpx;
+  background: #999;
+}
+.addresnai{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40rpx 110rpx 0;
+}
+.addresnai view:nth-child(2){
+  color: #999;
+  font-size: 16px;
+}
+.addr{
+  width: 750rpx;
+  height: 98rpx;
+  background: #fff;
+  line-height: 98rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.addr button{
+  width: 750rpx;
+  height: 100%;
+  border-radius: 0;
+  color: #ff5858;
+  font-size: 16px;
+  line-height: 3;
+}

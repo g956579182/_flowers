@@ -1,0 +1,83 @@
+<!--pages/promessage/promessage.wxml-->
+<import src="/dist/cart/cart.wxml" />
+<template is="cart" data='{{goods:prodetail,screenType:screenType,imgDomain:imgDomain,spec:spec}}' />
+<view class='allpage'>
+  <scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">
+    <view class='bgpic'>
+      <image src="{{imgDomain + prodetail.photos}}"></image>
+    </view>
+    <view class='promsg'>
+      <view class='proprice'>
+        <text>{{prodetail.name}}</text>
+        <view>
+          <text>￥{{prodetail.price}}</text>
+        </view>
+      </view>
+      <button type='button' class='shares' open-type="share">
+        <image src="/images/share.png"></image>
+        <text>分享</text>
+      </button>
+    </view>
+    <view class='comitsa'>
+      <text></text>
+      <text>商品评价</text>
+    </view>
+    <view class='commitsraea' wx:for="{{commits}}" wx:key="keys">
+      <view class='padlr'>
+        <view class='linflex'>
+          <view class='prostar'>
+            <view class='pinfont' wx:if="{{item.anonymity==1}}">匿名</view>
+            <view class='pinfont' wx:if="{{item.anonymity==0}}">{{item.member.nickname}}</view>
+            <view class="comment1-description" style="display:flex;flex-direction:row;margin-left:-10rpx;">
+              <view class="star-pos" style="display:flex;flex-direction:row;">
+                <view class="starsM  {{item.star>=1? '': 'hideStar'}}" bindtap="changeColor11"></view>
+                <view class="starsM  {{item.star>=2? '': 'hideStar'}}" bindtap="changeColor12"></view>
+                <view class="starsM  {{item.star>=3? '': 'hideStar'}}" bindtap="changeColor13"></view>
+                <view class="starsM  {{item.star>=4? '': 'hideStar'}}" bindtap="changeColor14"></view>
+                <view class="starsM  {{item.star>=5? '': 'hideStar'}}" bindtap="changeColor15"></view>
+              </view>
+            </view>
+          </view>
+          <view class='comitime'>{{item.created_at}}</view>
+        </view>
+        <view class='comitsfont'>
+          <view>{{item.comments}}</view>
+        </view>
+        <view class='commitsimg'>
+          <image src="/images/smallpro.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class='comitsa'>
+      <text></text>
+      <text>商品详情</text>
+    </view>
+    <view class='detailpro'>
+      <image src="{{imgDomain + prodetail.photos}}"></image>
+    </view>
+    <view class='evanai' wx:if="{{showhidden}}">
+      <text>没有更多评论了</text>
+    </view>
+    <view class='dispace'></view>
+  </scroll-view>
+
+  <view class='sroltop' wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">
+    <image src="/images/topbtn.png"></image>
+  </view>
+  <view class='paysel'>
+    <button open-type="contact" class='tokefu' >
+      <image src="/images/kefu.png"></image>
+      <text>客服</text>
+    </button>
+    <view class='toshop' bindtap="tocart">
+      <image src="/images/shopcart.png"></image>
+      <text>购物车</text>
+    </view>
+    <view class='joincart'>
+      <button type="button" hover-class='hoverd' bindtap="addcart">加入购物车</button>
+    </view>
+    <view class="paynow">
+      <button type="button" hover-class='hoverd' bindtap="buy">立即购买</button>
+    </view>
+  </view>
+</view>

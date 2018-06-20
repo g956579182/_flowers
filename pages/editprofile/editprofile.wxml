@@ -1,0 +1,23 @@
+<!--pages/editprofile/editprofile.wxml-->
+<view class='allpage'>
+  <view class='userarea'>
+    <image src="/images/touxiang.png"></image>
+    <view class='usernames'>用户微信名称</view>
+  </view>
+  <view class='inputmsg'>
+    <view class='fromfont'>姓名:</view>
+    <input type="text" placeholder='请输入您的姓名'></input>
+  </view>
+  <view class='inputmsg'>
+    <view class='fromfont'>手机号:</view>
+    <input type="number" placeholder='请输入11位手机号'></input>
+  </view>
+  <view class='inputmsg'>
+    <view class='fromfont'>性别:</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{gender}}" wx:key="keys">
+        <radio value="{{gender.name}}" checked="{{gender.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+</view>

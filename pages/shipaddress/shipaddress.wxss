@@ -1,0 +1,16 @@
+/* pages/shipaddress/shipaddress.wxss */
+.lines{
+  width: 120rpx;
+  height: 1rpx;
+  background: #999;
+}
+.addresnai{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40rpx 110rpx 0;
+}
+.addresnai view:nth-child(2){
+  color: #999;
+  font-size: 16px;
+}
